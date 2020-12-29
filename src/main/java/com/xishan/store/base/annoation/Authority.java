@@ -1,4 +1,4 @@
-package annoation;
+package com.xishan.store.base.annoation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

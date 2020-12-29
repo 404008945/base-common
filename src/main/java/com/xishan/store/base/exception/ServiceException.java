@@ -1,4 +1,4 @@
-package exception;
+package com.xishan.store.base.exception;
 
 import javax.naming.LimitExceededException;
 

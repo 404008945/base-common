@@ -1,4 +1,4 @@
-package response.util;
+package com.xishan.store.base.util;
 
 import java.io.Serializable;
 

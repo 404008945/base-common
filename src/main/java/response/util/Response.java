@@ -8,19 +8,19 @@ import java.io.Serializable;
  */
 public class Response<T> implements Serializable {
 
-    private int code;
+    private boolean success;
 
     private String message;
 
     private T data;
 
 
-    public int getCode() {
-        return code;
+    public boolean isSuccess() {
+        return success;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
     public String getMessage() {
@@ -41,15 +41,15 @@ public class Response<T> implements Serializable {
 
     public static <T> Response<T> ok(T t1,Class<T> clzz){
         Response<T> response = new Response<T>();
-        response.setCode(200);
+        response.setSuccess(true);
         response.setMessage("success");
         response.setData(t1);
         return response;
     }
 
-    public static <T> Response<T> fail(int code,String message,Class<T> clzz){
+    public static <T> Response<T> fail(boolean success,String message,Class<T> clzz){
         Response<T> response = new Response<T>();
-        response.setCode(code);
+        response.setSuccess(success);
         response.setMessage(message);
         return response;
     }

@@ -47,7 +47,7 @@ public class Response<T> implements Serializable {
         return response;
     }
 
-    public static <T> Response<T> fail(boolean success,String message,Class<T> clzz){
+    public static <T> Response<T> fail(String message,Class<T> clzz){
         Response<T> response = new Response<T>();
         response.setSuccess(false);
         response.setMessage(message);
